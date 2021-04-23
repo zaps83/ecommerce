@@ -65,4 +65,12 @@ export default makeStyles((theme) => ({
       width: '20ch',
     },
   },
+  disclaimer: {
+    position: 'absolute',
+    width: '100%',
+    left: '0',
+    textAlign: 'center',
+    top: '5em',
+    color: 'grey'
+  }
 }));

@@ -6,11 +6,11 @@ const CartItem = ({ item, handleUpdateCartQty, handleRemoveFromCart }) => {
     const classes = useStyles()
 
     return (
-        <Card>
+        <Card className={classes.root}>
             <CardMedia image={item.media.source} alt={item.name} className={classes.media} />
             <CardContent className={classes.cardContent}>
-                <Typography variant='h4'>{item.name}</Typography>
-                <Typography variant='h5'>{item.line_total.formatted_with_symbol}</Typography>
+                <Typography variant='h4' gutterBottom className={classes.name}>{item.name}</Typography>
+                <Typography variant='h5'className={classes.price}>{item.line_total.formatted_with_symbol}</Typography>
             </CardContent>
             <CardActions className={classes.cardActions}>
                 <div className={classes.buttons}>

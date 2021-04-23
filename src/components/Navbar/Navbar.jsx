@@ -14,20 +14,23 @@ const Navbar = ({ totalItems }) => {
             <AppBar position='fixed' className={classes.appBar} color='inherit'>
                 <Toolbar>
                     <Typography component={Link} to='/'variant='h6' className={classes.title} color='inherit'>
-                        <img src={logo} alt='Commerce.js' height='25px' className={classes.image}/>
-                        Commerce.js
+                        <img src='musiczaps.png' alt='Commerce.js' height='40px' className={classes.image}/>
+                        Zaps Music
                     </Typography>
                     <div className={classes.grow} />
                     <div className={classes.button}>
-                    {location.pathname === '/' && (
-                    <IconButton component={Link} to='/cart' aria-label='Show the cart items' color='inherit'>
-                        <Badge badgeContent={totalItems} color='secondary'>
-                            <ShoppingCart />
-                        </Badge>
-                    </IconButton> )}
-                        
+                        {location.pathname === '/' && (
+                        <>
+                            <IconButton component={Link} to='/cart' aria-label='Show the cart items' color='inherit'>
+                                <Badge badgeContent={totalItems} color='secondary'>
+                                    <ShoppingCart />
+                                </Badge>
+                            </IconButton>
+                        </> )}
                     </div>
+                   
                 </Toolbar>
+
             </AppBar>  
         </>
     )
